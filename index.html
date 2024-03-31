@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Подсчет расходов</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="confirm" class="confirm-dialog hidden">
+        <h3>Удалить запись?</h3>
+        <button id="yes">Да</button>
+        <button id="no">Нет</button>
+    </div>
+    <div class="tabs">
+        <button id="addExpenseBtn">Добавление расхода</button>
+        <button id="totalExpensesBtn">Расходы итого</button>
+    </div>
+
+    <div id="addExpenseSection">
+        <h2>Добавление расхода</h2>
+        <form id="expenseForm">
+            Категория: <select id="category" required></select><br>
+            Подкатегория: <select id="subcategory" required></select><br>
+            Дата: <input type="date" id="date" required><br>
+            Сумма: <input type="number" id="amount" required><br>
+            Описание: <textarea id="description" required></textarea><br>
+            <button type="submit">Добавить расход</button>
+        </form>
+    </div>
+
+    <div id="totalExpensesSection" class="hidden">
+        <h2>Расходы</h2>
+        <div class="buttons-container_page2">
+            <button id="showExpenses">Показать расходы</button>
+            <div>
+                <button id="exportBtn" style="background-color: rgb(186, 186, 108); width: 90px;">Экспорт</button>
+                <input type="file" id="fileInput" style="display: none;" accept=".json"/>
+                <button id="importBtn" style="background-color: rgb(158, 158, 112); width: 90px;">Импорт</button>
+            </div>
+        </div>
+        <div id="expensesList"></div>
+    </div>
+
+    <script src="app.js" type="module"></script>
+</body>
+
+</html>
