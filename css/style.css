@@ -111,3 +111,7 @@ button:hover {
     border-radius: 20px;
     box-shadow: 0 13px 17px rgba(0, 0, 0, 0.5);
 }
+
+.hidden {
+    display: none;
+}
